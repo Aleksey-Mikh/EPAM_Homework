@@ -58,7 +58,7 @@ def get_data_for_table(list_numbers):
 
 def main():
     list_numbers = [
-        input(f"Please input data in format \"letter = number\", data received : {i} / 4 - ") for i in range(4)
+        input(f"Please input data in format \"letter = value\", data received : {i} / 4 - ") for i in range(4)
     ]
     line, column = get_data_for_table(list_numbers)
     if check_data(line, column):
