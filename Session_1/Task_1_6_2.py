@@ -45,7 +45,7 @@ def check_data(line, column):
 def get_data_for_table(list_numbers):
     line, column, temp_numbers = [], [], []
     for number in list_numbers:
-        temp_numbers.append(int(number[-1]))
+        temp_numbers.append(int(number.split(" = ")[1]))
 
     line, column = temp_numbers[:2], temp_numbers[2:]
 
@@ -58,7 +58,9 @@ def get_data_for_table(list_numbers):
 
 def main():
     list_numbers = [
-        input(f"Please input data in format \"letter = value\", data received : {i} / 4 - ") for i in range(4)
+        input(f"Please input data in format \"letter = number\","
+              f" data received : {i} / 4 - ")
+        for i in range(4)
     ]
     line, column = get_data_for_table(list_numbers)
     if check_data(line, column):
