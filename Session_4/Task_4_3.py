@@ -4,7 +4,7 @@ Implement a function which works the same as str.split method
 """
 
 
-def rebuild_split(string, sep=None):
+def rebuild_split(string, sep=None):  # TODO: Rebild function
     """function which works the same as str.split method"""
     result_list, word, check_sep = [], "", []
     ind = 0

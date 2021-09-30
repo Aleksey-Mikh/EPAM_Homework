@@ -15,7 +15,7 @@ def get_clear_string(string):
     """Remove all characters except letters and numbers"""
     template = r"[^A-Za-z0-9]"
     string = re.sub(template, "", string)
-    return string
+    return string.lower()
 
 
 def find_palindrome(string):

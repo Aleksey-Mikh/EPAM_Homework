@@ -12,7 +12,8 @@ Output: (8, 7, 1, 7, 8, 2, 9, 1, 1, 9, 9)
 
 def get_digits(num):
     """function returns a tuple of a given integer's digits"""
-    return tuple(list(num))
+    list_numbers = list(str(num))
+    return tuple(map(int, list_numbers))
 
 
 def main():

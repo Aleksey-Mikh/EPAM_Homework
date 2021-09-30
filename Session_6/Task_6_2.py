@@ -31,7 +31,7 @@ class HistoryDict:
     def set_value(self, key, value):
         if key.__hash__ and key.__eq__:
             self.dictionary.update([(key, value)])
-            self.history_list.append(key)
+            self.history_list.insert(0, key)
         else:
             raise TypeException(f"{key} can't be a dictionary key")
 
@@ -43,6 +43,17 @@ class HistoryDict:
 def main():
     d = HistoryDict({"foo": 42})
     d.set_value("bar", 43)
+    d.set_value("1", 43)
+    d.set_value("2", 43)
+    d.set_value("3", 43)
+    d.set_value("4", 43)
+    d.set_value("5", 43)
+    d.set_value("7", 43)
+    d.set_value("8", 43)
+    d.set_value("9", 43)
+    d.set_value("10", 43)
+    d.set_value("11", 43)
+    d.set_value("12", 43)
     print(d.get_history())
 
 
